@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D31C227814234F3000DB5046 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31C227714234F3000DB5046 /* Cocoa.framework */; };
+		D31C228214234F3000DB5046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D31C228014234F3000DB5046 /* InfoPlist.strings */; };
+		D31C228414234F3000DB5046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D31C228314234F3000DB5046 /* main.m */; };
+		D31C228814234F3000DB5046 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D31C228614234F3000DB5046 /* Credits.rtf */; };
+		D31C228B14234F3000DB5046 /* rememberMeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D31C228A14234F3000DB5046 /* rememberMeAppDelegate.m */; };
+		D31C228E14234F3000DB5046 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D31C228C14234F3000DB5046 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D31C227314234F3000DB5046 /* rememberMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rememberMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31C227714234F3000DB5046 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D31C227A14234F3000DB5046 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D31C227B14234F3000DB5046 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D31C227C14234F3000DB5046 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D31C227F14234F3000DB5046 /* rememberMe-Info.plist */ = {isa = PBXFileReference; path = "rememberMe-Info.plist"; sourceTree = "<group>"; };
+		D31C228114234F3000DB5046 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D31C228314234F3000DB5046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D31C228514234F3000DB5046 /* rememberMe-Prefix.pch */ = {isa = PBXFileReference; path = "rememberMe-Prefix.pch"; sourceTree = "<group>"; };
+		D31C228714234F3000DB5046 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D31C228914234F3000DB5046 /* rememberMeAppDelegate.h */ = {isa = PBXFileReference; path = rememberMeAppDelegate.h; sourceTree = "<group>"; };
+		D31C228A14234F3000DB5046 /* rememberMeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rememberMeAppDelegate.m; sourceTree = "<group>"; };
+		D31C228D14234F3000DB5046 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D31C227014234F3000DB5046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31C227814234F3000DB5046 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D31C226814234F3000DB5046 = {
+			isa = PBXGroup;
+			children = (
+				D31C227D14234F3000DB5046 /* rememberMe */,
+				D31C227614234F3000DB5046 /* Frameworks */,
+				D31C227414234F3000DB5046 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D31C227414234F3000DB5046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D31C227314234F3000DB5046 /* rememberMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D31C227614234F3000DB5046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D31C227714234F3000DB5046 /* Cocoa.framework */,
+				D31C227914234F3000DB5046 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D31C227914234F3000DB5046 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D31C227A14234F3000DB5046 /* AppKit.framework */,
+				D31C227B14234F3000DB5046 /* CoreData.framework */,
+				D31C227C14234F3000DB5046 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D31C227D14234F3000DB5046 /* rememberMe */ = {
+			isa = PBXGroup;
+			children = (
+				D31C228914234F3000DB5046 /* rememberMeAppDelegate.h */,
+				D31C228A14234F3000DB5046 /* rememberMeAppDelegate.m */,
+				D31C228C14234F3000DB5046 /* MainMenu.xib */,
+				D31C227E14234F3000DB5046 /* Supporting Files */,
+			);
+			path = rememberMe;
+			sourceTree = "<group>";
+		};
+		D31C227E14234F3000DB5046 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D31C227F14234F3000DB5046 /* rememberMe-Info.plist */,
+				D31C228014234F3000DB5046 /* InfoPlist.strings */,
+				D31C228314234F3000DB5046 /* main.m */,
+				D31C228514234F3000DB5046 /* rememberMe-Prefix.pch */,
+				D31C228614234F3000DB5046 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D31C227214234F3000DB5046 /* rememberMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D31C229114234F3000DB5046 /* Build configuration list for PBXNativeTarget "rememberMe" */;
+			buildPhases = (
+				D31C226F14234F3000DB5046 /* Sources */,
+				D31C227014234F3000DB5046 /* Frameworks */,
+				D31C227114234F3000DB5046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rememberMe;
+			productName = rememberMe;
+			productReference = D31C227314234F3000DB5046 /* rememberMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D31C226A14234F3000DB5046 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = D31C226D14234F3000DB5046 /* Build configuration list for PBXProject "rememberMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D31C226814234F3000DB5046;
+			productRefGroup = D31C227414234F3000DB5046 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D31C227214234F3000DB5046 /* rememberMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D31C227114234F3000DB5046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31C228214234F3000DB5046 /* InfoPlist.strings in Resources */,
+				D31C228814234F3000DB5046 /* Credits.rtf in Resources */,
+				D31C228E14234F3000DB5046 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D31C226F14234F3000DB5046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31C228414234F3000DB5046 /* main.m in Sources */,
+				D31C228B14234F3000DB5046 /* rememberMeAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D31C228014234F3000DB5046 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D31C228114234F3000DB5046 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D31C228614234F3000DB5046 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D31C228714234F3000DB5046 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D31C228C14234F3000DB5046 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D31C228D14234F3000DB5046 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D31C228F14234F3000DB5046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D31C229014234F3000DB5046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D31C229214234F3000DB5046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rememberMe/rememberMe-Prefix.pch";
+				INFOPLIST_FILE = "rememberMe/rememberMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D31C229314234F3000DB5046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rememberMe/rememberMe-Prefix.pch";
+				INFOPLIST_FILE = "rememberMe/rememberMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D31C226D14234F3000DB5046 /* Build configuration list for PBXProject "rememberMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D31C228F14234F3000DB5046 /* Debug */,
+				D31C229014234F3000DB5046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D31C229114234F3000DB5046 /* Build configuration list for PBXNativeTarget "rememberMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D31C229214234F3000DB5046 /* Debug */,
+				D31C229314234F3000DB5046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D31C226A14234F3000DB5046 /* Project object */;
+}
