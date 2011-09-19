@@ -10,8 +10,16 @@
 
 @interface rememberMeAppDelegate : NSObject <NSApplicationDelegate> {
 	NSWindow *window;
+	NSStatusItem *statusItem;
+	NSArray *strings;
+	NSTimer *timer;
+	NSTextField *label;
+	int index;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+@property (nonatomic,retain) NSStatusItem *statusItem;
+@property (nonatomic,retain) NSArray *strings;
+@property (nonatomic,retain) NSTimer *timer;
 
 @end

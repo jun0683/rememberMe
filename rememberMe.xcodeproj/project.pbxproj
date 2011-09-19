@@ -21,12 +21,12 @@
 		D31C227A14234F3000DB5046 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D31C227B14234F3000DB5046 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D31C227C14234F3000DB5046 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D31C227F14234F3000DB5046 /* rememberMe-Info.plist */ = {isa = PBXFileReference; path = "rememberMe-Info.plist"; sourceTree = "<group>"; };
+		D31C227F14234F3000DB5046 /* rememberMe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rememberMe-Info.plist"; sourceTree = "<group>"; };
 		D31C228114234F3000DB5046 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D31C228314234F3000DB5046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D31C228514234F3000DB5046 /* rememberMe-Prefix.pch */ = {isa = PBXFileReference; path = "rememberMe-Prefix.pch"; sourceTree = "<group>"; };
+		D31C228514234F3000DB5046 /* rememberMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rememberMe-Prefix.pch"; sourceTree = "<group>"; };
 		D31C228714234F3000DB5046 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		D31C228914234F3000DB5046 /* rememberMeAppDelegate.h */ = {isa = PBXFileReference; path = rememberMeAppDelegate.h; sourceTree = "<group>"; };
+		D31C228914234F3000DB5046 /* rememberMeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rememberMeAppDelegate.h; sourceTree = "<group>"; };
 		D31C228A14234F3000DB5046 /* rememberMeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rememberMeAppDelegate.m; sourceTree = "<group>"; };
 		D31C228D14234F3000DB5046 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
