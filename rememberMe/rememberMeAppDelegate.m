@@ -22,23 +22,13 @@
 	[icon setSize:NSMakeSize([[NSStatusBar systemStatusBar] thickness], [[NSStatusBar systemStatusBar] thickness]-5)];
 	[statusItem setImage:icon];
 	[statusItem setMenu:statusMenu];
-//	CGFloat length = ([statusItem length] == NSVariableStatusItemLength) ? 32.0f : [statusItem length];
-//	NSRect frame = NSMakeRect(0, 0, length, [[NSStatusBar systemStatusBar] thickness]);
-	
-//	label =  [[statusBarLabel alloc] initWithFrame:frame];
-//	[label setPopUpStatusItemMenu:^(void) {
-//		[statusItem popUpStatusItemMenu:statusMenu];
-//	}];
-//	
-//	
-//	statusItem.view = label;
 	[statusItem setHighlightMode:YES];
 	
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	index = 0;
+	
 	
 	self.timer = [NSTimer scheduledTimerWithTimeInterval:60
 												  target:self 
@@ -48,10 +38,12 @@
 	
 	ViewController = [[stringsViewController alloc] initWithWindowNibName:@"stringsViewController"];
 	[ViewController changeString:^(NSString* string) {
+		index = 0;
 		[self newStrings:string];
+		[self changeString];
 	}];
 	[ViewController loadString];
-	[self changeString];
+
 }
 
 - (IBAction)stringsMenu:(id)sender
@@ -74,8 +66,6 @@
 	[self notiGrowl:title];
 	
 	index++;
-	
-	
 }
 
 - (void)notiGrowl:(NSString*)title
