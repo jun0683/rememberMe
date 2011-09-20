@@ -91,7 +91,7 @@
 		[GrowlApplicationBridge notifyWithTitle:@"Remember Me!!"
 									description:title
 							   notificationName:@"Example"
-									   iconData:nil
+									   iconData:[[NSImage imageNamed:@"modBrainIcon1.png"] TIFFRepresentation]
 									   priority:0
 									   isSticky:YES
 								   clickContext:[NSDate date]];
