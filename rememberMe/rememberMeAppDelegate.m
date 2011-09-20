@@ -8,8 +8,10 @@
 
 #import "rememberMeAppDelegate.h"
 #import "stringsViewController.h"
+#import "settingsWindowsController.h"
 @implementation rememberMeAppDelegate
 
+@synthesize ViewController;
 @synthesize statusItem;
 @synthesize strings;
 @synthesize timer;
@@ -36,19 +38,27 @@
 												userInfo:nil 
 												 repeats:YES];
 	
-	ViewController = [[stringsViewController alloc] initWithWindowNibName:@"stringsViewController"];
-	[ViewController changeString:^(NSString* string) {
-		index = 0;
-		[self newStrings:string];
-		[self changeString];
-	}];
-	[ViewController loadString];
+	
 
+}
+
+- (IBAction)settingMenu:(id)sender
+{
+	self.ViewController = [[[settingsWindowsController alloc] initWithWindowNibName:@"settingsWindow"] autorelease];
+	[ViewController showWindow:ViewController.window];
+	
 }
 
 - (IBAction)stringsMenu:(id)sender
 {
-	[ViewController toggleVisibility:YES];
+	self.ViewController = [[[stringsViewController alloc] initWithWindowNibName:@"stringsViewController"] autorelease];
+	[(stringsViewController*)ViewController changeString:^(NSString* string) {
+		index = 0;
+		[self newStrings:string];
+		[self changeString];
+	}];
+	[(stringsViewController*)ViewController loadString];
+	[(stringsViewController*)ViewController toggleVisibility:YES];
 }
 
 - (void)newStrings:(NSString*)aStrings
@@ -58,6 +68,9 @@
 
 - (void)changeString
 {
+	if ([strings count] == 0)
+		return;
+	
 	if (index >= [strings count]) {
 		index=0;
 	}	

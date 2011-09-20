@@ -17,17 +17,19 @@
 	NSStatusItem *statusItem;
 	NSArray *strings;
 	NSTimer *timer;
-	stringsViewController *ViewController;
+	NSWindowController *ViewController;
 	int index;
 	IBOutlet NSMenu *statusMenu;
 }
 
-
+@property (nonatomic,retain) NSWindowController *ViewController;
 @property (nonatomic,retain) NSStatusItem *statusItem;
 @property (nonatomic,retain) NSArray *strings;
 @property (nonatomic,retain) NSTimer *timer;
 
 - (IBAction)stringsMenu:(id)sender;
+- (IBAction)settingMenu:(id)sender;
+
 - (void)newStrings:(NSString*)strings;
 - (void)notiGrowl:(NSString*)title;
 - (void)changeString;

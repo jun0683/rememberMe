@@ -7,6 +7,7 @@
 //
 
 #import "stringsViewController.h"
+#import "rememberDatas.h"
 
 @implementation stringsViewController
 

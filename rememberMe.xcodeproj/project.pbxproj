@@ -20,6 +20,9 @@
 		D33DC5661428A11E009E9025 /* Growl-WithInstaller.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */; };
 		D33DC5681428A12C009E9025 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = D33DC5671428A12C009E9025 /* Growl Registration Ticket.growlRegDict */; };
 		D36540E51428B20E006A32F4 /* Growl-License.txt in Resources */ = {isa = PBXBuildFile; fileRef = D36540E41428B20E006A32F4 /* Growl-License.txt */; };
+		D36540F11428B57C006A32F4 /* settingsWindowsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36540F01428B57C006A32F4 /* settingsWindowsController.m */; };
+		D36540F31428B58F006A32F4 /* settingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36540F21428B58F006A32F4 /* settingsWindow.xib */; };
+		D36540F61428BF5E006A32F4 /* rememberDatas.m in Sources */ = {isa = PBXBuildFile; fileRef = D36540F51428BF5E006A32F4 /* rememberDatas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +59,11 @@
 		D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
 		D33DC5671428A12C009E9025 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		D36540E41428B20E006A32F4 /* Growl-License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Growl-License.txt"; sourceTree = "<group>"; };
+		D36540EF1428B57C006A32F4 /* settingsWindowsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsWindowsController.h; sourceTree = "<group>"; };
+		D36540F01428B57C006A32F4 /* settingsWindowsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsWindowsController.m; sourceTree = "<group>"; };
+		D36540F21428B58F006A32F4 /* settingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingsWindow.xib; sourceTree = "<group>"; };
+		D36540F41428BF5E006A32F4 /* rememberDatas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rememberDatas.h; sourceTree = "<group>"; };
+		D36540F51428BF5E006A32F4 /* rememberDatas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rememberDatas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,13 +122,18 @@
 		D31C227D14234F3000DB5046 /* rememberMe */ = {
 			isa = PBXGroup;
 			children = (
+				D31C227E14234F3000DB5046 /* Supporting Files */,
 				D324ECE11427ADD100E91476 /* stringsViewController.h */,
 				D324ECE21427ADD100E91476 /* stringsViewController.m */,
 				D324ECE31427ADD100E91476 /* stringsViewController.xib */,
 				D31C228914234F3000DB5046 /* rememberMeAppDelegate.h */,
 				D31C228A14234F3000DB5046 /* rememberMeAppDelegate.m */,
 				D31C228C14234F3000DB5046 /* MainMenu.xib */,
-				D31C227E14234F3000DB5046 /* Supporting Files */,
+				D36540EF1428B57C006A32F4 /* settingsWindowsController.h */,
+				D36540F01428B57C006A32F4 /* settingsWindowsController.m */,
+				D36540F21428B58F006A32F4 /* settingsWindow.xib */,
+				D36540F41428BF5E006A32F4 /* rememberDatas.h */,
+				D36540F51428BF5E006A32F4 /* rememberDatas.m */,
 			);
 			path = rememberMe;
 			sourceTree = "<group>";
@@ -192,6 +205,7 @@
 				D33DC55E14289E36009E9025 /* modBrainIcon1.png in Resources */,
 				D33DC5681428A12C009E9025 /* Growl Registration Ticket.growlRegDict in Resources */,
 				D36540E51428B20E006A32F4 /* Growl-License.txt in Resources */,
+				D36540F31428B58F006A32F4 /* settingsWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +219,8 @@
 				D31C228414234F3000DB5046 /* main.m in Sources */,
 				D31C228B14234F3000DB5046 /* rememberMeAppDelegate.m in Sources */,
 				D324ECE41427ADD100E91476 /* stringsViewController.m in Sources */,
+				D36540F11428B57C006A32F4 /* settingsWindowsController.m in Sources */,
+				D36540F61428BF5E006A32F4 /* rememberDatas.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
