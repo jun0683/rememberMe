@@ -7,11 +7,13 @@
 //
 
 #import "rememberMeAppDelegate.h"
-#import "stringsViewController.h"
-#import "settingsWindowsController.h"
+#import "stringsWindowController.h"
+#import "settingsWindowController.h"
 #import "rememberDatas.h"
 @implementation rememberMeAppDelegate
 
+
+@synthesize windowController;
 @synthesize statusItem;
 @synthesize strings;
 @synthesize timer;
@@ -42,9 +44,10 @@
 
 - (IBAction)settingMenu:(id)sender
 {
-	ViewController = [[[settingsWindowsController alloc] initWithWindowNibName:@"settingsWindow"] autorelease];
-	[ViewController showWindow:ViewController.window];
-	[(settingsWindowsController*)ViewController changeTime:^(void) {
+	[windowController close];
+	self.windowController = [[[settingsWindowController alloc] initWithWindowNibName:@"settingsWindow"] autorelease];
+	[windowController showWindow:windowController.window];
+	[(settingsWindowController*)windowController changeTime:^(void) {
 		[self reLoadTime];
 	}];
 	
@@ -52,13 +55,14 @@
 
 - (IBAction)stringsMenu:(id)sender
 {
-	ViewController = [[[stringsViewController alloc] initWithWindowNibName:@"stringsViewController"] autorelease];
-	[(stringsViewController*)ViewController changeString:^(NSString* string) {
+	[windowController close];
+	self.windowController = [[[stringsWindowController alloc] initWithWindowNibName:@"stringsWindowController"] autorelease];
+	[(stringsWindowController*)windowController changeString:^(NSString* string) {
 		index = 0;
 		[self reLoadStrings];
 		[self changeString];
 	}];
-	[(stringsViewController*)ViewController toggleVisibility:YES];
+	[(stringsWindowController*)windowController toggleVisibility:YES];
 }
 
 - (void)reLoadTime

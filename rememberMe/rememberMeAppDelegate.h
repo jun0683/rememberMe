@@ -10,18 +10,19 @@
 #import <Growl-WithInstaller/Growl.h>
 
 @class statusBarLabel;
-@class stringsViewController;
+@class stringsWindowController;
 
 @interface rememberMeAppDelegate : NSObject <GrowlApplicationBridgeDelegate> {
 
 	NSStatusItem *statusItem;
 	NSArray *strings;
 	NSTimer *timer;
-	NSWindowController *ViewController;
+	NSWindowController *windowController;
 	int index;
 	IBOutlet NSMenu *statusMenu;
 }
 
+@property (nonatomic,retain) NSWindowController *windowController;
 @property (nonatomic,retain) NSStatusItem *statusItem;
 @property (nonatomic,retain) NSArray *strings;
 @property (nonatomic,retain) NSTimer *timer;
