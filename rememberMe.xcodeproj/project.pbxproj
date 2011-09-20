@@ -19,6 +19,7 @@
 		D33DC56414289ED3009E9025 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */; };
 		D33DC5661428A11E009E9025 /* Growl-WithInstaller.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */; };
 		D33DC5681428A12C009E9025 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = D33DC5671428A12C009E9025 /* Growl Registration Ticket.growlRegDict */; };
+		D36540E51428B20E006A32F4 /* Growl-License.txt in Resources */ = {isa = PBXBuildFile; fileRef = D36540E41428B20E006A32F4 /* Growl-License.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +55,7 @@
 		D33DC55D14289E36009E9025 /* modBrainIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modBrainIcon1.png; sourceTree = "<group>"; };
 		D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
 		D33DC5671428A12C009E9025 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		D36540E41428B20E006A32F4 /* Growl-License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Growl-License.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		D31C226814234F3000DB5046 = {
 			isa = PBXGroup;
 			children = (
+				D36540E41428B20E006A32F4 /* Growl-License.txt */,
 				D33DC5671428A12C009E9025 /* Growl Registration Ticket.growlRegDict */,
 				D33DC55D14289E36009E9025 /* modBrainIcon1.png */,
 				D31C227D14234F3000DB5046 /* rememberMe */,
@@ -188,6 +191,7 @@
 				D324ECE51427ADD100E91476 /* stringsViewController.xib in Resources */,
 				D33DC55E14289E36009E9025 /* modBrainIcon1.png in Resources */,
 				D33DC5681428A12C009E9025 /* Growl Registration Ticket.growlRegDict in Resources */,
+				D36540E51428B20E006A32F4 /* Growl-License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
