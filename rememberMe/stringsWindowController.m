@@ -18,6 +18,7 @@
 {
     self = [super initWithWindow:window];
     if (self) {
+		NSLog(@"initWithWindow");
     }
     
     return self;
@@ -30,8 +31,8 @@
 
 - (IBAction)done:(id)sender
 {
-	newStringBlock(textView.string);
 	[[rememberDatas sharedInstance] saveString:textView.string];
+	newStringBlock();
 	[self close];
 }
 

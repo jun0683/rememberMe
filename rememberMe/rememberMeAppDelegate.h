@@ -11,13 +11,15 @@
 
 @class statusBarLabel;
 @class stringsWindowController;
+@class settingsWindowController;
 
 @interface rememberMeAppDelegate : NSObject <GrowlApplicationBridgeDelegate> {
 
 	NSStatusItem *statusItem;
 	NSArray *strings;
 	NSTimer *timer;
-	NSWindowController *windowController;
+	settingsWindowController *settingsWC;
+	stringsWindowController *stringsWC;
 	int index;
 	IBOutlet NSMenu *statusMenu;
 }

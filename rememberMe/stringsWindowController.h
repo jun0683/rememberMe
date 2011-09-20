@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-typedef void (^stringWithBlock)(NSString *string);
+typedef void (^stringWithBlock)();
 
 @interface stringsWindowController : NSWindowController
 {

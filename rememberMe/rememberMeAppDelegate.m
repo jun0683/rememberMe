@@ -31,8 +31,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	
-	
+	settingsWC = [[settingsWindowController alloc] initWithWindowNibName:@"settingsWindow"];
+	stringsWC = [[stringsWindowController alloc] initWithWindowNibName:@"stringsWindowController"];
 	
 	
 	[self reLoadStrings];
@@ -42,30 +42,21 @@
 }
 
 - (IBAction)settingMenu:(id)sender
-{
-	[windowController close];
-	[windowController release];
-	windowController = [[settingsWindowController alloc] initWithWindowNibName:@"settingsWindow"];
-	
-	[(settingsWindowController*)windowController changeTime:^(void) {
+{	
+	[settingsWC changeTime:^(void) {
 		[self reLoadTime];
 	}];
-	[windowController showWindow:windowController.window];
-	
+	[settingsWC showWindow:self];
 }
 
 - (IBAction)stringsMenu:(id)sender
-{
-	[windowController close];
-	[windowController release];
-	windowController = [[stringsWindowController alloc] initWithWindowNibName:@"stringsWindowController"];
-	
-	[(stringsWindowController*)windowController changeString:^(NSString* string) {
+{	
+	[stringsWC changeString:^(void) {
 		index = 0;
 		[self reLoadStrings];
 		[self changeString];
 	}];
-	[windowController showWindow:windowController.window];
+	[stringsWC showWindow:self];
 }
 
 - (void)reLoadTime
