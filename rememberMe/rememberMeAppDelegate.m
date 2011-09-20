@@ -9,6 +9,7 @@
 #import "rememberMeAppDelegate.h"
 #import "stringsViewController.h"
 #import "settingsWindowsController.h"
+#import "rememberDatas.h"
 @implementation rememberMeAppDelegate
 
 @synthesize ViewController;
@@ -38,7 +39,8 @@
 												userInfo:nil 
 												 repeats:YES];
 	
-	
+	[self reLoadStrings];
+	[self changeString];
 
 }
 
@@ -54,16 +56,16 @@
 	self.ViewController = [[[stringsViewController alloc] initWithWindowNibName:@"stringsViewController"] autorelease];
 	[(stringsViewController*)ViewController changeString:^(NSString* string) {
 		index = 0;
-		[self newStrings:string];
+		[self reLoadStrings];
 		[self changeString];
 	}];
-	[(stringsViewController*)ViewController loadString];
 	[(stringsViewController*)ViewController toggleVisibility:YES];
 }
 
-- (void)newStrings:(NSString*)aStrings
+- (void)reLoadStrings
 {
-	self.strings = [aStrings componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+	self.strings = [[[rememberDatas sharedInstance] loadString] componentsSeparatedByCharactersInSet:
+					[NSCharacterSet newlineCharacterSet]];
 }
 
 - (void)changeString

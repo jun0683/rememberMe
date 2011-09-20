@@ -13,10 +13,10 @@ typedef void (^stringWithBlock)(NSString *string);
 @interface stringsViewController : NSWindowController
 {
 	IBOutlet NSTextView *textView;
-	NSString *storedString;
+//	NSString *storedString;
 }
 @property (nonatomic,copy) stringWithBlock newStringBlock;
-@property (nonatomic,copy) NSString *storedString;
+//@property (nonatomic,copy) NSString *storedString;
 
 
 - (void)loadString;

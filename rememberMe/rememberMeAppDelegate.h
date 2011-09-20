@@ -30,7 +30,9 @@
 - (IBAction)stringsMenu:(id)sender;
 - (IBAction)settingMenu:(id)sender;
 
-- (void)newStrings:(NSString*)strings;
+
 - (void)notiGrowl:(NSString*)title;
+
+- (void)reLoadStrings;
 - (void)changeString;
 @end
