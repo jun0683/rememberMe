@@ -8,18 +8,26 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class statusBarLabel;
+@class stringsViewController;
+
 @interface rememberMeAppDelegate : NSObject <NSApplicationDelegate> {
-	NSWindow *window;
+
 	NSStatusItem *statusItem;
 	NSArray *strings;
 	NSTimer *timer;
-	NSTextField *label;
+	statusBarLabel *label;
+	stringsViewController *ViewController;
 	int index;
+	IBOutlet NSMenu *statusMenu;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+
 @property (nonatomic,retain) NSStatusItem *statusItem;
 @property (nonatomic,retain) NSArray *strings;
 @property (nonatomic,retain) NSTimer *timer;
+
+- (IBAction)stringsMenu:(id)sender;
+- (void)newStrings:(NSString*)strings;
 
 @end

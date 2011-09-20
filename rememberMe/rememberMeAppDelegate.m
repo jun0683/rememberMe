@@ -7,10 +7,10 @@
 //
 
 #import "rememberMeAppDelegate.h"
-
+#import "statusBarLabel.h"
+#import "stringsViewController.h"
 @implementation rememberMeAppDelegate
 
-@synthesize window;
 @synthesize statusItem;
 @synthesize strings;
 @synthesize timer;
@@ -18,23 +18,23 @@
 - (void)awakeFromNib
 {
 	self.statusItem	= [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-	[statusItem setTitle:@"우주미아홍구"];
-	[NSRunningApplication currentApplication];
-
-//	[statusItem setHighlightMode:YES];
 	CGFloat length = ([statusItem length] == NSVariableStatusItemLength) ? 32.0f : [statusItem length];
 	NSRect frame = NSMakeRect(0, 0, length, [[NSStatusBar systemStatusBar] thickness]);
-	label =  [[NSTextField alloc] initWithFrame:frame];
-	[label setStringValue:@"우주미아홍구"];
-	[label setBezeled:NO];
-//	[label setDrawsBackground:YES];
-//	[label setBackgroundColor:[NSColor blueColor]];
-	[label setEditable:NO];
-	[label setSelectable:NO];
-	[label setTranslatesAutoresizingMaskIntoConstraints:YES];
-	[[label cell] setLineBreakMode:NSLineBreakByCharWrapping];
-	[[label cell] setWraps:NO];
+	label =  [[statusBarLabel alloc] initWithFrame:frame];
+	[label setPopUpStatusItemMenu:^(void) {
+		[statusItem popUpStatusItemMenu:statusMenu];
+	}];
+	
+	
 	statusItem.view = label;
+	[statusItem setHighlightMode:YES];
+	
+	
+	
+	ViewController = [[stringsViewController alloc] initWithWindowNibName:@"stringsViewController"];
+	[ViewController changeString:^(NSString* string) {
+		[self newStrings:string];
+	}];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -48,34 +48,32 @@
 						@"(잠 6:11)	 네 빈궁이 강도 같이 오며 네 곤핍이 군사 같이 이르리라",
 						nil];
 	index = 0;
-	NSLog(@"%@",NSStringFromRect([[[statusItem view] window] frame]));
+	
 	self.timer = [NSTimer scheduledTimerWithTimeInterval:5 
 												  target:self 
 												selector:@selector(changeString) 
 												userInfo:nil 
 												 repeats:YES];
 	
-	NSLog(@"%@",NSStringFromSize([[[NSApplication sharedApplication] mainMenu] size]));
-	NSLog(@"%f",[[[NSApplication sharedApplication] mainMenu] minimumWidth]);
+	[ViewController showWindow:self];
 	
-	NSInteger item = [[[NSApplication sharedApplication] mainMenu] numberOfItems];
-	NSLog(@"%@",[[[NSApplication sharedApplication] mainMenu] itemAtIndex:item-1]);
-	NSLog(@"%@",NSStringFromRect([[[[[[NSApplication sharedApplication] mainMenu] itemAtIndex:item-1] view] window ] frame]));
-	NSLog(@"%@",[[NSApplication sharedApplication] helpMenu]);
-	NSLog(@"%@",[[NSApplication sharedApplication] mainMenu]);
-	NSLog(@"%@",[[NSApplication sharedApplication] windowsMenu]);
-
-	NSLog(@"what");
 }
 
-- (void)reloadString
+- (IBAction)stringsMenu:(id)sender
 {
-	
+	[ViewController toggleVisibility:YES];
+}
+
+- (void)newStrings:(NSString*)aStrings
+{
+	self.strings = [aStrings componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 }
 
 - (void)changeString
 {
-		
+	if (index >= [strings count]) {
+		index=0;
+	}	
 	NSString *title = [strings objectAtIndex:index];
 	NSSize titlesize = [title sizeWithAttributes:[NSDictionary dictionaryWithObject:[label font] 
 										  forKey:NSFontAttributeName]];
@@ -85,16 +83,11 @@
 	[label setFrame:newFrame];
 	[label setStringValue:title];
 	
-	NSLog(@"%d",index);
-	NSLog(@"%@",NSStringFromRect(newFrame));
-	NSLog(@"%@",NSStringFromRect([[[statusItem view] window] frame]));
-	
 	index++;
-	if (index >= [strings count]) {
-		index=0;
-	}
+	
 	
 }
+
 
 
 @end
