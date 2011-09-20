@@ -7,11 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Growl-WithInstaller/Growl.h>
 
 @class statusBarLabel;
 @class stringsViewController;
 
-@interface rememberMeAppDelegate : NSObject <NSApplicationDelegate> {
+@interface rememberMeAppDelegate : NSObject <GrowlApplicationBridgeDelegate> {
 
 	NSStatusItem *statusItem;
 	NSArray *strings;
@@ -29,5 +30,5 @@
 
 - (IBAction)stringsMenu:(id)sender;
 - (void)newStrings:(NSString*)strings;
-
+- (void)notiGrowl:(NSString*)title;
 @end

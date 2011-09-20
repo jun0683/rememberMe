@@ -70,17 +70,35 @@
 		index=0;
 	}	
 	NSString *title = [strings objectAtIndex:index];
-//	NSSize titlesize = [title sizeWithAttributes:[NSDictionary dictionaryWithObject:[label font] 
-//										  forKey:NSFontAttributeName]];
-//	NSRect newFrame = [label frame];
-//	newFrame.size.width = titlesize.width + 8;
-//
-//	[label setFrame:newFrame];
-//	[label setStringValue:title];
+	
+	[self notiGrowl:title];
 	
 	index++;
 	
 	
+}
+
+- (void)notiGrowl:(NSString*)title
+{
+	NSBundle *myBundle = [NSBundle bundleForClass:[rememberMeAppDelegate class]];
+	NSString *growlPath = [[myBundle privateFrameworksPath] stringByAppendingPathComponent:@"Growl-WithInstaller.framework"];
+	NSBundle *growlBundle = [NSBundle bundleWithPath:growlPath];
+	
+	if (growlBundle && [growlBundle load]) {
+		// Register ourselves as a Growl delegate
+		[GrowlApplicationBridge setGrowlDelegate:self];
+		
+		[GrowlApplicationBridge notifyWithTitle:@"Remember Me!!"
+									description:title
+							   notificationName:@"Example"
+									   iconData:nil
+									   priority:0
+									   isSticky:NO
+								   clickContext:[NSDate date]];
+	}
+	else {
+		NSLog(@"ERROR: Could not load Growl.framework");
+	}
 }
 
 
