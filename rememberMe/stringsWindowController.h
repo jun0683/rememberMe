@@ -16,12 +16,10 @@ typedef void (^stringWithBlock)(NSString *string);
 //	NSString *storedString;
 }
 @property (nonatomic,copy) stringWithBlock newStringBlock;
-//@property (nonatomic,copy) NSString *storedString;
 
 
 - (void)loadString;
 - (void)changeString:(stringWithBlock)block;
-- (void)toggleVisibility:(bool)aVisible;
 - (IBAction)done:(id)sender;
 
 @end

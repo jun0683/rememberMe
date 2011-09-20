@@ -32,21 +32,9 @@
 {
 	newStringBlock(textView.string);
 	[[rememberDatas sharedInstance] saveString:textView.string];
-	[self toggleVisibility:NO];
+	[self close];
 }
 
-- (void)toggleVisibility:(bool)aVisible
-{
-	if (aVisible) 
-    {
-		[self showWindow:self];
-	}
-	else {
-		
-		[self close];
-		
-	}
-}
 
 - (void)changeString:(stringWithBlock)block
 {
@@ -60,6 +48,7 @@
 
 - (void)dealloc
 {
+	[textView release];
 	[newStringBlock release];
 	[super dealloc];
 }

@@ -13,7 +13,6 @@
 @implementation rememberMeAppDelegate
 
 
-@synthesize windowController;
 @synthesize statusItem;
 @synthesize strings;
 @synthesize timer;
@@ -45,24 +44,28 @@
 - (IBAction)settingMenu:(id)sender
 {
 	[windowController close];
-	self.windowController = [[[settingsWindowController alloc] initWithWindowNibName:@"settingsWindow"] autorelease];
-	[windowController showWindow:windowController.window];
+	[windowController release];
+	windowController = [[settingsWindowController alloc] initWithWindowNibName:@"settingsWindow"];
+	
 	[(settingsWindowController*)windowController changeTime:^(void) {
 		[self reLoadTime];
 	}];
+	[windowController showWindow:windowController.window];
 	
 }
 
 - (IBAction)stringsMenu:(id)sender
 {
 	[windowController close];
-	self.windowController = [[[stringsWindowController alloc] initWithWindowNibName:@"stringsWindowController"] autorelease];
+	[windowController release];
+	windowController = [[stringsWindowController alloc] initWithWindowNibName:@"stringsWindowController"];
+	
 	[(stringsWindowController*)windowController changeString:^(NSString* string) {
 		index = 0;
 		[self reLoadStrings];
 		[self changeString];
 	}];
-	[(stringsWindowController*)windowController toggleVisibility:YES];
+	[windowController showWindow:windowController.window];
 }
 
 - (void)reLoadTime

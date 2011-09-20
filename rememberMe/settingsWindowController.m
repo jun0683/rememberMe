@@ -61,6 +61,8 @@
 
 - (void)dealloc
 {
+	[label release];
+	[stepper release];
 	[block release];
 	[super dealloc];
 }
