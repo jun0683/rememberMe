@@ -22,7 +22,6 @@
 	IBOutlet NSMenu *statusMenu;
 }
 
-@property (nonatomic,retain) NSWindowController *ViewController;
 @property (nonatomic,retain) NSStatusItem *statusItem;
 @property (nonatomic,retain) NSArray *strings;
 @property (nonatomic,retain) NSTimer *timer;

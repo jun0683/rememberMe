@@ -12,7 +12,6 @@
 #import "rememberDatas.h"
 @implementation rememberMeAppDelegate
 
-@synthesize ViewController;
 @synthesize statusItem;
 @synthesize strings;
 @synthesize timer;
@@ -43,7 +42,7 @@
 
 - (IBAction)settingMenu:(id)sender
 {
-	self.ViewController = [[[settingsWindowsController alloc] initWithWindowNibName:@"settingsWindow"] autorelease];
+	ViewController = [[[settingsWindowsController alloc] initWithWindowNibName:@"settingsWindow"] autorelease];
 	[ViewController showWindow:ViewController.window];
 	[(settingsWindowsController*)ViewController changeTime:^(void) {
 		[self reLoadTime];
@@ -53,7 +52,7 @@
 
 - (IBAction)stringsMenu:(id)sender
 {
-	self.ViewController = [[[stringsViewController alloc] initWithWindowNibName:@"stringsViewController"] autorelease];
+	ViewController = [[[stringsViewController alloc] initWithWindowNibName:@"stringsViewController"] autorelease];
 	[(stringsViewController*)ViewController changeString:^(NSString* string) {
 		index = 0;
 		[self reLoadStrings];
