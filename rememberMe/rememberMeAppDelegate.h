@@ -17,7 +17,6 @@
 	NSStatusItem *statusItem;
 	NSArray *strings;
 	NSTimer *timer;
-//	statusBarLabel *label;
 	stringsViewController *ViewController;
 	int index;
 	IBOutlet NSMenu *statusMenu;
@@ -31,4 +30,5 @@
 - (IBAction)stringsMenu:(id)sender;
 - (void)newStrings:(NSString*)strings;
 - (void)notiGrowl:(NSString*)title;
+- (void)changeString;
 @end

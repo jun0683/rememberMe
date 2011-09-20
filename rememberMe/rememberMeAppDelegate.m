@@ -7,7 +7,6 @@
 //
 
 #import "rememberMeAppDelegate.h"
-#import "statusBarLabel.h"
 #import "stringsViewController.h"
 @implementation rememberMeAppDelegate
 
@@ -41,7 +40,7 @@
 {
 	index = 0;
 	
-	self.timer = [NSTimer scheduledTimerWithTimeInterval:1
+	self.timer = [NSTimer scheduledTimerWithTimeInterval:60
 												  target:self 
 												selector:@selector(changeString) 
 												userInfo:nil 
@@ -52,6 +51,7 @@
 		[self newStrings:string];
 	}];
 	[ViewController loadString];
+	[self changeString];
 }
 
 - (IBAction)stringsMenu:(id)sender
@@ -93,7 +93,7 @@
 							   notificationName:@"Example"
 									   iconData:nil
 									   priority:0
-									   isSticky:NO
+									   isSticky:YES
 								   clickContext:[NSDate date]];
 	}
 	else {
