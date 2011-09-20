@@ -16,6 +16,9 @@
 		D324ECD71427A78200E91476 /* statusBarLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D324ECD61427A78200E91476 /* statusBarLabel.m */; };
 		D324ECE41427ADD100E91476 /* stringsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D324ECE21427ADD100E91476 /* stringsViewController.m */; };
 		D324ECE51427ADD100E91476 /* stringsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D324ECE31427ADD100E91476 /* stringsViewController.xib */; };
+		D33DC55A14289D60009E9025 /* modBrainIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D33DC55914289D60009E9025 /* modBrainIcon.png */; };
+		D33DC55E14289E36009E9025 /* modBrainIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = D33DC55D14289E36009E9025 /* modBrainIcon1.png */; };
+		D33DC56414289ED3009E9025 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		D324ECE11427ADD100E91476 /* stringsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringsViewController.h; sourceTree = "<group>"; };
 		D324ECE21427ADD100E91476 /* stringsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stringsViewController.m; sourceTree = "<group>"; };
 		D324ECE31427ADD100E91476 /* stringsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = stringsViewController.xib; sourceTree = "<group>"; };
+		D33DC55914289D60009E9025 /* modBrainIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modBrainIcon.png; sourceTree = "<group>"; };
+		D33DC55D14289E36009E9025 /* modBrainIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modBrainIcon1.png; sourceTree = "<group>"; };
+		D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D31C227814234F3000DB5046 /* Cocoa.framework in Frameworks */,
+				D33DC56414289ED3009E9025 /* Growl-WithInstaller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,8 @@
 		D31C226814234F3000DB5046 = {
 			isa = PBXGroup;
 			children = (
+				D33DC55D14289E36009E9025 /* modBrainIcon1.png */,
+				D33DC55914289D60009E9025 /* modBrainIcon.png */,
 				D324ECD51427A78200E91476 /* statusBarLabel.h */,
 				D324ECD61427A78200E91476 /* statusBarLabel.m */,
 				D31C227D14234F3000DB5046 /* rememberMe */,
@@ -73,6 +82,7 @@
 		D31C227614234F3000DB5046 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */,
 				D31C227714234F3000DB5046 /* Cocoa.framework */,
 				D31C227914234F3000DB5046 /* Other Frameworks */,
 			);
@@ -166,6 +176,8 @@
 				D31C228814234F3000DB5046 /* Credits.rtf in Resources */,
 				D31C228E14234F3000DB5046 /* MainMenu.xib in Resources */,
 				D324ECE51427ADD100E91476 /* stringsViewController.xib in Resources */,
+				D33DC55A14289D60009E9025 /* modBrainIcon.png in Resources */,
+				D33DC55E14289E36009E9025 /* modBrainIcon1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +273,10 @@
 		D31C229214234F3000DB5046 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rememberMe/rememberMe-Prefix.pch";
 				INFOPLIST_FILE = "rememberMe/rememberMe-Info.plist";
@@ -272,6 +288,10 @@
 		D31C229314234F3000DB5046 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rememberMe/rememberMe-Prefix.pch";
 				INFOPLIST_FILE = "rememberMe/rememberMe-Info.plist";

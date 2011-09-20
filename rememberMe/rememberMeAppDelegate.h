@@ -16,7 +16,7 @@
 	NSStatusItem *statusItem;
 	NSArray *strings;
 	NSTimer *timer;
-	statusBarLabel *label;
+//	statusBarLabel *label;
 	stringsViewController *ViewController;
 	int index;
 	IBOutlet NSMenu *statusMenu;
