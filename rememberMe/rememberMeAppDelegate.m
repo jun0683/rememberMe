@@ -33,14 +33,11 @@
 {
 	
 	
-	self.timer = [NSTimer scheduledTimerWithTimeInterval:60
-												  target:self 
-												selector:@selector(changeString) 
-												userInfo:nil 
-												 repeats:YES];
+	
 	
 	[self reLoadStrings];
 	[self changeString];
+	[self reLoadTime];
 
 }
 
@@ -48,6 +45,9 @@
 {
 	self.ViewController = [[[settingsWindowsController alloc] initWithWindowNibName:@"settingsWindow"] autorelease];
 	[ViewController showWindow:ViewController.window];
+	[(settingsWindowsController*)ViewController changeTime:^(void) {
+		[self reLoadTime];
+	}];
 	
 }
 
@@ -60,6 +60,17 @@
 		[self changeString];
 	}];
 	[(stringsViewController*)ViewController toggleVisibility:YES];
+}
+
+- (void)reLoadTime
+{
+	double time = [[rememberDatas sharedInstance] loadTime]*1;
+	[timer invalidate];
+	self.timer = [NSTimer scheduledTimerWithTimeInterval:time
+												  target:self 
+												selector:@selector(changeString) 
+												userInfo:nil 
+												 repeats:YES];
 }
 
 - (void)reLoadStrings

@@ -92,5 +92,21 @@ static rememberDatas *_instance;
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (int)loadTime
+{
+	int time = [[[NSUserDefaults standardUserDefaults] stringForKey:@"time"] intValue];
+	if (time == 0) {
+		time = 10;
+		[self saveTime:time];
+	}
+	return time;
+}
+
+- (void)saveTime:(int)aTime
+{
+	[[NSUserDefaults standardUserDefaults] setInteger:aTime forKey:@"time"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 
 @end

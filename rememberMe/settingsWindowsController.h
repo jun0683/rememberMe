@@ -8,15 +8,21 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef void (^Block)();
+
 @interface settingsWindowsController : NSWindowController
 {
 	NSTextField *label;
 	NSStepper *stepper;
 }
 
+@property (nonatomic,copy) Block block;
 @property (assign) IBOutlet NSTextField *label;
 @property (assign) IBOutlet NSStepper *stepper;
 
 - (IBAction) controlDidChange: (NSStepper*) sender;
+- (IBAction) done:(id)sender;
+
+- (void)changeTime:(Block)aBlock;
 
 @end

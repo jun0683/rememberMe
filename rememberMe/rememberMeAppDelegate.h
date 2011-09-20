@@ -35,4 +35,6 @@
 
 - (void)reLoadStrings;
 - (void)changeString;
+
+- (void)reLoadTime;
 @end

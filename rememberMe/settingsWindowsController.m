@@ -7,10 +7,12 @@
 //
 
 #import "settingsWindowsController.h"
+#import "rememberDatas.h"
 
 @implementation settingsWindowsController
 @synthesize label;
 @synthesize stepper;
+@synthesize block;
 
 - (id)initWithWindow:(NSWindow *)window
 {
@@ -26,13 +28,14 @@
 {
     [super windowDidLoad];
     
-    [stepper setIntegerValue:10];
-	[label setIntegerValue:10];
+    [stepper setIntegerValue:[[rememberDatas sharedInstance] loadTime]];
+	[label setIntegerValue:[[rememberDatas sharedInstance] loadTime]];
 }
 
 - (IBAction) controlDidChange: (id) sender
 {
 	[label setIntegerValue:[sender intValue]];
+	[[rememberDatas sharedInstance] saveTime:[sender intValue]];
 }
 
 - (void)controlTextDidChange:(NSNotification *)aNotification {
@@ -40,8 +43,20 @@
 		
 		if ( [aNotification object] == label ) {
 			[stepper setIntValue:[label intValue]];
+			[[rememberDatas sharedInstance] saveTime:[label intValue]];
 		}
 	}
+}
+
+- (IBAction) done:(id)sender
+{
+	block();
+	[self close];
+}
+
+- (void)changeTime:(Block)aBlock
+{
+	self.block = aBlock;
 }
 
 

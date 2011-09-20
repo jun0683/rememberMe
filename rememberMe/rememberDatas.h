@@ -15,6 +15,10 @@
 }
 
 + (rememberDatas*) sharedInstance;
+
 - (NSString*)loadString;
 - (void)saveString:(NSString*)aString;
+
+- (int)loadTime;
+- (void)saveTime:(int)aTime;
 @end
