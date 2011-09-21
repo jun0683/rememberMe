@@ -21,8 +21,8 @@
 {
 	self.statusItem	= [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
 	
-	NSImage *icon = [NSImage imageNamed:@"modBrainIcon1.png"];
-	[icon setSize:NSMakeSize([[NSStatusBar systemStatusBar] thickness], [[NSStatusBar systemStatusBar] thickness]-5)];
+	NSImage *icon = [NSImage imageNamed:@"rememberMe.icns"];
+	[icon setSize:NSMakeSize([[NSStatusBar systemStatusBar] thickness], [[NSStatusBar systemStatusBar] thickness])];
 	[statusItem setImage:icon];
 	[statusItem setMenu:statusMenu];
 	[statusItem setHighlightMode:YES];
@@ -61,7 +61,7 @@
 
 - (void)reLoadTime
 {
-	double time = [[rememberDatas sharedInstance] loadTime]*1;
+	double time = [[rememberDatas sharedInstance] loadTime]*60;
 	[timer invalidate];
 	self.timer = [NSTimer scheduledTimerWithTimeInterval:time
 												  target:self 
@@ -104,7 +104,7 @@
 		[GrowlApplicationBridge notifyWithTitle:@"Remember Me!!"
 									description:title
 							   notificationName:@"Example"
-									   iconData:[[NSImage imageNamed:@"modBrainIcon1.png"] TIFFRepresentation]
+									   iconData:[[NSImage imageNamed:@"rememberMe.icns"] TIFFRepresentation]
 									   priority:0
 									   isSticky:YES
 								   clickContext:[NSDate date]];

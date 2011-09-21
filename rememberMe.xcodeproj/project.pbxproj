@@ -15,10 +15,10 @@
 		D31C228E14234F3000DB5046 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D31C228C14234F3000DB5046 /* MainMenu.xib */; };
 		D324ECE41427ADD100E91476 /* stringsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D324ECE21427ADD100E91476 /* stringsWindowController.m */; };
 		D324ECE51427ADD100E91476 /* stringsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D324ECE31427ADD100E91476 /* stringsWindowController.xib */; };
-		D33DC55E14289E36009E9025 /* modBrainIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = D33DC55D14289E36009E9025 /* modBrainIcon1.png */; };
 		D33DC56414289ED3009E9025 /* Growl-WithInstaller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */; };
 		D33DC5661428A11E009E9025 /* Growl-WithInstaller.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */; };
 		D33DC5681428A12C009E9025 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = D33DC5671428A12C009E9025 /* Growl Registration Ticket.growlRegDict */; };
+		D35CB24114296A3D0009C507 /* rememberMe.icns in Resources */ = {isa = PBXBuildFile; fileRef = D35CB24014296A3D0009C507 /* rememberMe.icns */; };
 		D36540E51428B20E006A32F4 /* Growl-License.txt in Resources */ = {isa = PBXBuildFile; fileRef = D36540E41428B20E006A32F4 /* Growl-License.txt */; };
 		D36540F11428B57C006A32F4 /* settingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36540F01428B57C006A32F4 /* settingsWindowController.m */; };
 		D36540F31428B58F006A32F4 /* settingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36540F21428B58F006A32F4 /* settingsWindow.xib */; };
@@ -52,14 +52,14 @@
 		D31C228914234F3000DB5046 /* rememberMeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rememberMeAppDelegate.h; sourceTree = "<group>"; };
 		D31C228A14234F3000DB5046 /* rememberMeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rememberMeAppDelegate.m; sourceTree = "<group>"; };
 		D31C228D14234F3000DB5046 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		D324ECE11427ADD100E91476 /* stringsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = stringsWindowController.h; sourceTree = "<group>"; };
+		D324ECE11427ADD100E91476 /* stringsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringsWindowController.h; sourceTree = "<group>"; };
 		D324ECE21427ADD100E91476 /* stringsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stringsWindowController.m; sourceTree = "<group>"; };
 		D324ECE31427ADD100E91476 /* stringsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = stringsWindowController.xib; sourceTree = "<group>"; };
-		D33DC55D14289E36009E9025 /* modBrainIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modBrainIcon1.png; sourceTree = "<group>"; };
 		D33DC56314289ED3009E9025 /* Growl-WithInstaller.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "Growl-WithInstaller.framework"; sourceTree = "<group>"; };
 		D33DC5671428A12C009E9025 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		D35CB24014296A3D0009C507 /* rememberMe.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = rememberMe.icns; sourceTree = "<group>"; };
 		D36540E41428B20E006A32F4 /* Growl-License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Growl-License.txt"; sourceTree = "<group>"; };
-		D36540EF1428B57C006A32F4 /* settingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = settingsWindowController.h; sourceTree = "<group>"; };
+		D36540EF1428B57C006A32F4 /* settingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsWindowController.h; sourceTree = "<group>"; };
 		D36540F01428B57C006A32F4 /* settingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsWindowController.m; sourceTree = "<group>"; };
 		D36540F21428B58F006A32F4 /* settingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingsWindow.xib; sourceTree = "<group>"; };
 		D36540F41428BF5E006A32F4 /* rememberDatas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rememberDatas.h; sourceTree = "<group>"; };
@@ -82,9 +82,9 @@
 		D31C226814234F3000DB5046 = {
 			isa = PBXGroup;
 			children = (
+				D35CB24014296A3D0009C507 /* rememberMe.icns */,
 				D36540E41428B20E006A32F4 /* Growl-License.txt */,
 				D33DC5671428A12C009E9025 /* Growl Registration Ticket.growlRegDict */,
-				D33DC55D14289E36009E9025 /* modBrainIcon1.png */,
 				D31C227D14234F3000DB5046 /* rememberMe */,
 				D31C227614234F3000DB5046 /* Frameworks */,
 				D31C227414234F3000DB5046 /* Products */,
@@ -202,10 +202,10 @@
 				D31C228814234F3000DB5046 /* Credits.rtf in Resources */,
 				D31C228E14234F3000DB5046 /* MainMenu.xib in Resources */,
 				D324ECE51427ADD100E91476 /* stringsWindowController.xib in Resources */,
-				D33DC55E14289E36009E9025 /* modBrainIcon1.png in Resources */,
 				D33DC5681428A12C009E9025 /* Growl Registration Ticket.growlRegDict in Resources */,
 				D36540E51428B20E006A32F4 /* Growl-License.txt in Resources */,
 				D36540F31428B58F006A32F4 /* settingsWindow.xib in Resources */,
+				D35CB24114296A3D0009C507 /* rememberMe.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

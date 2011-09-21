@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>modBrainIcon1.png</string>
+	<string>rememberMe.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.hongpany.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>

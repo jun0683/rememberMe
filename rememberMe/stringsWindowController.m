@@ -18,7 +18,6 @@
 {
     self = [super initWithWindow:window];
     if (self) {
-		NSLog(@"initWithWindow");
     }
     
     return self;
